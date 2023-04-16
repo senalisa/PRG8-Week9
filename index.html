@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./js/index.js" type="module"></script>
+    <title>Migraine Type Prediction</title>
+</head>
+
+<body>
+
+    <div id="div1">
+        <h1> Migraine Type Prediction </h1>
+        Do you want to know what type of migraine you have? <br>
+        By answering the following questions, we can predict it! <br>
+        Keep in mind, this is only a prediction. <br> Always contact a doctor if you want to know more.
+    </div>
+   
+    <div id="div2">
+    <form id="patientForm">
+
+        <label for="Location">Where is the location of your pain?</label>
+        <select id="Location">
+        <option value="0">None</option>
+        <option value="1">Unilateral</option>
+        <option value="2">Bilateral</option>
+        </select>
+
+        <label for="Character">Do you have throbbing or constant pain?</label>
+        <select id="Character">
+        <option value="0">None</option>
+        <option value="1">Throbbing</option>
+        <option value="2">Constant</option>
+        </select>
+
+        <label for="Intensity">How intense is your pain?</label>
+        <select id="Intensity">
+        <option value="0">None</option>
+        <option value="1">Mild</option>
+        <option value="2">Medium</option>
+        <option value="3">Severe</option>
+        </select>
+
+        <label for="Visual">Visual?</label>
+        <select id="Visual">
+        <option value="0">None</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+        <option value="4">Four</option>
+        <option value="5">Five</option>
+        </select>
+
+        <label for="Vertigo">Do you have dizzines?</label>
+        <select id="Vertigo">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+        </select>
+
+        <label for="Tinnitus">Do you have ringing in your ears?</label>
+        <select id="Tinnitus">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+        </select>
+
+        <label for="Hypoacusis">Do you have hearing loss?</label>
+        <select id="Hypoacusis">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+        </select>
+
+        <label for="Diplopia">Do you have double vision?</label>
+        <select id="Diplopia">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+        </select>
+
+        <label for="Defect">Do you have simultaneous frontal eye field and nasal field defect and in both eyes?</label>
+        <select id="Defect">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+        </select>
+
+        <button type="submit">Predict</button>
+
+    </form>
+    </div>
+
+    <p id="predictionResult"></p>
+
+</body>
+
+</html>
